@@ -1,3 +1,4 @@
+import sys
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.model_selection import *
 from sklearn.linear_model import LogisticRegression
@@ -5,17 +6,18 @@ from random import randint
 
 data = []
 data_labels = []
-with open("/home/pos_tweets.txt") as f:
+
+with open(posi_set) as f:
     for i in f:
         data.append(i)
         data_labels.append('happy')
 
-with open("/home/neg_tweets.txt") as f:
+with open(nega_set) as f:
     for i in f:
         data.append(i)
         data_labels.append('sad')
 
-with open("/home/angry_tweets.txt") as f:
+with open(angr_set) as f:
     for i in f:
         data.append(i)
         data_labels.append('angry')
@@ -45,3 +47,14 @@ def label_new_data(sentiments):
     for i in range(len(labels)):
         print(labels[i])
 
+def main():
+    posi_set = "/home/pos_tweets.txt"
+    nega_set = "/home/neg_tweets.txt"
+    angr_set = "/home/angry_tweets.txt"
+    if len(sys.argv) > 1:
+        posi_set = sys.argv[1]
+        nega_set = sys.argv[2]
+        angr_set = sys.argv[3]
+
+if __name__ == '__main__':
+    main()
