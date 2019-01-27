@@ -7,6 +7,10 @@ from random import randint
 data = []
 data_labels = []
 
+posi_set = "./pos_tweets.txt"
+nega_set = "./neg_tweets.txt"
+angr_set = "./angry_tweets.txt"
+
 with open(posi_set) as f:
     for i in f:
         data.append(i)
@@ -47,14 +51,14 @@ def label_new_data(sentiments):
     for i in range(len(labels)):
         print(labels[i])
 
-def main():
-    posi_set = "./pos_tweets.txt"
-    nega_set = "./neg_tweets.txt"
-    angr_set = "./angry_tweets.txt"
+#def main():
+#    posi_set = "./pos_tweets.txt"
+#    nega_set = "./neg_tweets.txt"
+#    angr_set = "./angry_tweets.txt"
     #if len(sys.argv) > 1:
      #   posi_set = sys.argv[1]
       #  nega_set = sys.argv[2]
        # angr_set = sys.argv[3]
 
-if __name__ == '__main__':
-    main()
+# if __name__ == '__main__':
+#    main()
