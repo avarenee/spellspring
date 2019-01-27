@@ -48,13 +48,13 @@ def label_new_data(sentiments):
         print(labels[i])
 
 def main():
-    posi_set = "/home/pos_tweets.txt"
-    nega_set = "/home/neg_tweets.txt"
-    angr_set = "/home/angry_tweets.txt"
-    if len(sys.argv) > 1:
-        posi_set = sys.argv[1]
-        nega_set = sys.argv[2]
-        angr_set = sys.argv[3]
+    posi_set = "./pos_tweets.txt"
+    nega_set = "./neg_tweets.txt"
+    angr_set = "./angry_tweets.txt"
+    #if len(sys.argv) > 1:
+     #   posi_set = sys.argv[1]
+      #  nega_set = sys.argv[2]
+       # angr_set = sys.argv[3]
 
 if __name__ == '__main__':
     main()
