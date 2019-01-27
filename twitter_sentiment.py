@@ -45,5 +45,3 @@ def label_new_data(sentiments):
     for i in range(len(labels)):
         print(labels[i])
 
-label_new_data(["I love my life"])
-    
